@@ -1,48 +1,34 @@
-function loadCSS(file) {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = file;
-    document.head.appendChild(link);
-}
+//Importaciones
+fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header').innerHTML = data;
 
-function loandComopontent() {
-    const basePath = window.location.pathname.includes('/html/')
-        ? '../html/'
-        : './html/';
+        // Agregar la clase 'active' al elemento correcto
+        const navLinks = document.querySelectorAll(".nav-item a");
+        const currentUrl = window.location.pathname;
 
-    fetch(`${basePath}navBar.html`)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header').innerHTML = data;
-            loadCSS('/css/navBar.css');
-            const navLinks = document.querySelectorAll(".nav-item a");
-            const currentUrl = window.location.pathname;
-
-            navLinks.forEach(link => {
-                if (link.getAttribute("href") === currentUrl) {
-                    link.parentElement.classList.add("active");
-                } else {
-                    link.parentElement.classList.remove("active");
-                }
-            });
-        })
-
-    fetch(`${basePath}footer.html`)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('main').innerHTML = data;
-            loadCSS('/css/footer.');
-
-            const btnScroll = document.getElementById("btn-scroll");
-            if (btnScroll) {
-                btnScroll.onclick = function () {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                };
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentUrl) {
+                link.parentElement.classList.add("active");
+            } else {
+                link.parentElement.classList.remove("active");
             }
         });
-}
+    })
 
-document.addEventListener("DOMContentLoaded", loandComopontent);
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('main').innerHTML = data;
+
+        const btnScroll = document.getElementById("btn-scroll");
+        if (btnScroll) {
+            btnScroll.onclick = function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        }
+    });
 
 //Carousel
 document.addEventListener('DOMContentLoaded', function () {
