@@ -32,7 +32,7 @@ function loandComopontent() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('main').innerHTML = data;
-            loadCSS('/css/footer.css');
+            loadCSS('/css/footer.');
 
             const btnScroll = document.getElementById("btn-scroll");
             if (btnScroll) {
