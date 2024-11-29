@@ -33,13 +33,9 @@ main {
 }
 
 .form-control {
-    border: none;
-    border-bottom: 1px solid #eee;
+    border: none !important;
+    border-bottom: 1px solid #eee !important;
     box-shadow: none !important;
-}
-
-.form-control::before {
-    border-bottom: 1px solid red !important;
 }
 
 .btn-card {
