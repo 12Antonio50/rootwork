@@ -1,3 +1,10 @@
+function loadCSS(file) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = file;
+    document.head.appendChild(link);
+}
+
 function loandComopontent() {
     const basePath = window.location.pathname.includes('/html/')
         ? '../html/'
@@ -7,7 +14,7 @@ function loandComopontent() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('header').innerHTML = data;
-
+            loadCSS('/css/navBar.css');
             // Agregar la clase 'active' al elemento correcto
             const navLinks = document.querySelectorAll(".nav-item a");
             const currentUrl = window.location.pathname;
@@ -25,6 +32,7 @@ function loandComopontent() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('main').innerHTML = data;
+            loadCSS('/css/footer.css');
 
             const btnScroll = document.getElementById("btn-scroll");
             if (btnScroll) {
