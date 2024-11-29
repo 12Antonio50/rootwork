@@ -1,47 +1,54 @@
-//Importaciones
-fetch('/html/navbar.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('header').innerHTML = data;
+function loandComopontent() {
+    const basePath = window.location.pathname.includes('/html/')
+        ? '../html/'
+        : './html/';
 
-        // Agregar la clase 'active' al elemento correcto
-        const navLinks = document.querySelectorAll(".nav-item a");
-        const currentUrl = window.location.pathname;
+    fetch(`${basePath}navbar.html`)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
 
-        navLinks.forEach(link => {
-            if (link.getAttribute("href") === currentUrl) {
-                link.parentElement.classList.add("active");
-            } else {
-                link.parentElement.classList.remove("active");
+            // Agregar la clase 'active' al elemento correcto
+            const navLinks = document.querySelectorAll(".nav-item a");
+            const currentUrl = window.location.pathname;
+
+            navLinks.forEach(link => {
+                if (link.getAttribute("href") === currentUrl) {
+                    link.parentElement.classList.add("active");
+                } else {
+                    link.parentElement.classList.remove("active");
+                }
+            });
+        })
+
+    fetch(`${basePath}footer.html`)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('main').innerHTML = data;
+
+            const btnScroll = document.getElementById("btn-scroll");
+            if (btnScroll) {
+                btnScroll.onclick = function () {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
             }
         });
-    })
+}
 
-fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('main').innerHTML = data;
-
-        const btnScroll = document.getElementById("btn-scroll");
-        if (btnScroll) {
-            btnScroll.onclick = function () {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            };
-        }
-    });
+document.addEventListener("DOMContentLoaded", loandComopontent);
 
 //Carousel
 document.addEventListener('DOMContentLoaded', function () {
     const images = [
-        "./picture/img_1.jpg",
-        "./picture/img_2.jpg",
-        "./picture/img_3.jpg",
-        "./picture/img_4.jpeg",
-        "./picture/img_5.jpg",
-        "./picture/img_6.jpg",
-        "./picture/img_7.jpg",
-        "./picture/img_8.jpg",
-        "./picture/img_9.jpeg"
+        "../picture/img_1.jpg",
+        "../picture/img_2.jpg",
+        "../picture/img_3.jpg",
+        "../picture/img_4.jpeg",
+        "../picture/img_5.jpg",
+        "../picture/img_6.jpg",
+        "../picture/img_7.jpg",
+        "../picture/img_8.jpg",
+        "../picture/img_9.jpeg"
     ];
 
     let currentIndex = 0;
