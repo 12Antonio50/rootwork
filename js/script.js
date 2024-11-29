@@ -3,7 +3,7 @@ function loandComopontent() {
         ? '../html/'
         : './html/';
 
-    fetch(`${basePath}navbar.html`)
+    fetch(`${basePath}navBar.html`)
         .then(response => response.text())
         .then(data => {
             document.getElementById('header').innerHTML = data;
