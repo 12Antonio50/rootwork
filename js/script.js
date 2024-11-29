@@ -30,6 +30,7 @@ fetch('footer.html')
         }
     });
 
+    
 //Carousel
 document.addEventListener('DOMContentLoaded', function () {
     const images = [
