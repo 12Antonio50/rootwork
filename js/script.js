@@ -15,7 +15,6 @@ function loandComopontent() {
         .then(data => {
             document.getElementById('header').innerHTML = data;
             loadCSS('/css/navBar.css');
-            // Agregar la clase 'active' al elemento correcto
             const navLinks = document.querySelectorAll(".nav-item a");
             const currentUrl = window.location.pathname;
 
