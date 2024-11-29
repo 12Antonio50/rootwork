@@ -1,5 +1,5 @@
 //Importaciones
-fetch('navBar.html')
+fetch('/html/navBar.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header').innerHTML = data;
