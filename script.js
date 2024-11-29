@@ -1,5 +1,5 @@
 //Importaciones
-fetch('../html/navBar.html')
+fetch('navBar.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header').innerHTML = data;
@@ -17,7 +17,7 @@ fetch('../html/navBar.html')
         });
     })
 
-fetch('../html/footer.html')
+fetch('footer.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('main').innerHTML = data;
