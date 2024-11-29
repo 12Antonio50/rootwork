@@ -34,15 +34,15 @@ fetch('footer.html')
 //Carousel
 document.addEventListener('DOMContentLoaded', function () {
     const images = [
-        "/picture/img_1.jpg",
-        "/picture/img_2.jpg",
-        "/picture/img_3.jpg",
-        "/picture/img_4.jpeg",
-        "/picture/img_5.jpg",
-        "/picture/img_6.jpg",
-        "/picture/img_7.jpg",
-        "/picture/img_8.jpg",
-        "/picture/img_9.jpeg"
+        "/rootwork/picture/img_1.jpg",
+        "/rootwork/picture/img_2.jpg",
+        "/rootwork/picture/img_3.jpg",
+        "/rootwork/picture/img_4.jpeg",
+        "/rootwork/picture/img_5.jpg",
+        "/rootwork/picture/img_6.jpg",
+        "/rootwork/picture/img_7.jpg",
+        "/rootwork/picture/img_8.jpg",
+        "/rootwork/picture/img_9.jpeg"
     ];
 
     let currentIndex = 0;
@@ -67,3 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(changeImage, 5000);
     changeImage();
 });
+
+function loadImageWithPage (file) {
+
+}
