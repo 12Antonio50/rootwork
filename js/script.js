@@ -34,27 +34,34 @@ fetch('footer.html')
 //Carousel
 document.addEventListener('DOMContentLoaded', function () {
     const images = [
-        "../picture/img_1.jpg",
-        "../picture/img_2.jpg",
-        "../picture/img_3.jpg",
-        "../picture/img_4.jpeg",
-        "../picture/img_5.jpg",
-        "../picture/img_6.jpg",
-        "../picture/img_7.jpg",
-        "../picture/img_8.jpg",
-        "../picture/img_9.jpeg"
+        "/picture/img_1.jpg",
+        "/picture/img_2.jpg",
+        "/picture/img_3.jpg",
+        "/picture/img_4.jpeg",
+        "/picture/img_5.jpg",
+        "/picture/img_6.jpg",
+        "/picture/img_7.jpg",
+        "/picture/img_8.jpg",
+        "/picture/img_9.jpeg"
     ];
 
     let currentIndex = 0;
     let totalImages = images.length;
 
+    // Crear un arreglo de imágenes cargadas
+    const imgElements = images.map(src => {
+        const img = new Image();
+        img.src = src;  // Pre-cargar las imágenes
+        return img;
+    });
+
     function changeImage() {
         const currentImageContainer = document.getElementById(`imageContainer${currentIndex + 1}`);
         const nextIndex = (currentIndex + 1) % totalImages;
         const nextImageContainer = document.getElementById(`imageContainer${nextIndex + 1}`);
-
+        
         const imgElement = nextImageContainer.querySelector('img');
-        imgElement.src = images[nextIndex];
+        imgElement.src = imgElements[nextIndex].src;  // Asignar la imagen cargada
 
         currentImageContainer.classList.remove('show', 'zoom');
         currentImageContainer.classList.add('hide');
@@ -66,5 +73,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setInterval(changeImage, 5000);
 
-    changeImage();
+    changeImage();  // Llamada inicial para mostrar la primera imagen
 });
