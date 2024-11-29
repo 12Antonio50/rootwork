@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+main {
+    font-family: "Plus Jakarta Sans", serif;
+    font-optical-sizing: auto;
+}
+
+.container-fluid {
+    background: #FAFAFA;
+    padding: 2em 1em 2em 1em;
+}
+
+.footer-title,
+.footer-title-mobile {
+    color: #333333;
+    font-weight: 700;
+}
+
+.footer-title {
+    letter-spacing: -1px;
+    line-height: 1em;
+}
+
+.footer-title-mobile {
+    line-height: 1px;
+    display: none;
+}
+
+.footer-sub-title {
+    color: #333333;
+    font-weight: 300;
+    line-height: 1.66em;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #eee;
+    box-shadow: none !important;
+}
+
+.form-control::before {
+    border-bottom: 1px solid red !important;
+}
+
+.btn-card {
+    background: #F5C618;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.btn-card:hover {
+    color: #fff;
+}
+
+.btn-up {
+    color: #333333;
+    background: #E5E5DD;
+    font-weight: 400;
+    line-height: 1.66em;
+    height: 6rem;
+    box-shadow: none !important;
+}
+
+.footer-text-one {
+    color: #333333;
+    font-weight: 400;
+    line-height: 1.66em;
+    letter-spacing: -0.2px;
+}
+
+.footer-text-two {
+    color: #333333;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.footer-text-three {
+    color: #333333;
+    font-weight: 400;
+    line-height: 1.66em;
+    letter-spacing: -0.2px;
+}
+
+.footer-btn {
+    background: none;
+    border: 1px solid #39393933;
+}
+
+.footer-btn i {
+    font-size: 18px;
+}
+
+.footer-btn:hover i {
+    color: #F5C618;
+}
+
+.footer-text {
+    color: #E5E5DD;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+footer {
+    background: #333333;
+    height: 3rem;
+}

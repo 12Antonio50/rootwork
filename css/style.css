@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+main {
+    font-family: "Plus Jakarta Sans", serif;
+    font-optical-sizing: auto;
+    background: #F0F0F0;
+}
+
+.front-page {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: 0.65;
+    z-index: 1;
+}
+
+.card-front {
+    z-index: 2;
+}
+
+.front-page-text {
+    color: #E5E5DD;
+    text-align: justify;
+    font-size: 47px;
+    font-weight: 700;
+    line-height: 1.1em;
+    letter-spacing: -0.5px;
+    padding: 3em 5em 3em 5em;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 5s ease;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 5s ease;
+}
+
+.image-container.zoom img {
+    transform: scale(1.2);
+}
+
+.image-container.show {
+    opacity: 1;
+}
+
+.image-container.hide {
+    opacity: 0;
+}
+
+/*Card*/
+.card-front-text {
+    text-align: justify;
+    color: #333333;
+    font-size: 1.2em;
+    line-height: 1em;
+    ;
+    font-weight: 800;
+}
+
+.card-front-second-text {
+    text-align: justify;
+    color: #333333;
+    font-size: 0.875em;
+    line-height: 1.1em;
+    letter-spacing: -0.4px;
+    word-spacing: 0;
+    font-weight: 600;
+}
+
+.btn-card {
+    background: #F5C618 !important;
+    width: 100%;
+    color: #333333;
+}
+
+.btn-card:hover {
+    color: #fff !important;
+}
+
+.card-second-title {
+    color: #333333;
+    line-height: 1em;
+    font-weight: 700;
+}
+
+.card-second-p {
+    color: #ADADAD;
+    font-weight: 300;
+    line-height: 1.45em;
+}
+
+.card-p {
+    color: #333333;
+    text-align: justify;
+    font-weight: 400;
+    line-height: 1.66em;
+    letter-spacing: -0.8px;
+}
+
+.btn-information {
+    text-align: justify;
+    font-weight: 700;
+    line-height: 30px;
+    background: #F5C618 !important;
+    height: 3rem;
+}
+
+.card-second {
+    top: -2rem;
+    z-index: 2;
+}
+
+.card-three {
+    top: -2rem;
+    z-index: 2;
+    background: #F0F0F0 !important;
+    border: none !important;
+}
+
+.card-three-text {
+    color: #333333;
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: -0.9px;
+}
+
+.icon-three {
+    font-size: 14px;
+    margin-top: -20px;
+}
+
+.a-three {
+    color: #333333;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 1.66em;
+    margin-top: -20px;
+}
+
+.a-three:hover {
+    color: #333333;
+}
+
+.card-three-title-mobile {
+    text-align: justify;
+    color: #333333;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    line-height: 1em;
+    display: none;
+}
+
+.card-three-p {
+    text-align: justify;
+    color: #333333;
+    font-weight: 400;
+    line-height: 30px;
+    display: none;
+}
+
+.list-items {
+    color: #333333;
+    font-weight: 500;
+    line-height: 1.66em;
+    letter-spacing: -0.4px;
+}
+
+.list-items i {
+    font-size: 14px;
+}
+
+.title-welcome {
+    color: #333333;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.p-welcome {
+    text-align: justify;
+    color: #333333;
+    font-weight: 400;
+    line-height: 1.45em;
+    letter-spacing: -0.4px;
+}
+
+.inf-welcome a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.inf-welcome a:hover {
+    color: #333333;
+}
+
+.about-body {
+    padding: 2.5em;
+}
+
+.about-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-title-body {
+    color: #333333;
+    text-align: justify;
+    font-size: 51px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-text-body,
+.about-text-body-small {
+    color: #333333;
+    text-align: justify;
+    font-weight: 400;
+    line-height: 1.66em;
+    letter-spacing: -0.5px;
+}
+
+.about-text-body-small {
+    font-size: 22px;
+}
+
+.about-text-body {
+    font-size: 26px;
+}
+
+.about-icon-body {
+    font-size: 50px;
+}
+
+.about-p-body {
+    color: #333333;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.about-p-body {
+    text-align: justify;
+    color: #333333;
+    font-weight: 500;
+    line-height: 1.66em;
+}
+
+.about-sub-title-body {
+    color: #333333;
+    text-align: justify;
+    font-size: 43px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-btn-body {
+    text-align: justify;
+    font-weight: bold !important;
+    font-weight: 600;
+    line-height: 30px;
+    background: #F5C618 !important;
+    font-size: 18px !important;
+    box-shadow: none !important;
+}
+
+.section-2 {
+    margin: 2em 0em 0em 0em;
+}
+
+.section-2-up {
+    color: #333333;
+    font-weight: 700;
+    line-height: 1em;
+    padding: 0em 0em 0.8333em 0em;
+    border-bottom: 1px solid #E5E5DD;
+}
+
+.section-2-black {
+    background: #333333 !important;
+}
+
+/*Contacto*/
+.vh-30 {
+    height: 30vh;
+}
+
+.contact-title {
+    position: absolute;
+    z-index: 3;
+    color: #E5E5DD;
+    text-align: justify;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    letter-spacing: -0.5px;
+}
+
+.contact-p {
+    color: #333333;
+    font-weight: 200;
+    line-height: 1.66em;
+}
+
+.contact-h3 {
+    color: #333333;
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: -0.9px;
+}
+
+.contact-icon {
+    color: #333333;
+    font-weight: 500;
+    line-height: 1.66em;
+}
+
+.btn {
+    box-shadow: none !important;
+}
+
+/*Nuestro servicios*/
+.our-services-title {
+    color: #333333;
+    font-weight: 700;
+    line-height: 1em;
+    letter-spacing: 0.6px;
+    font-size: 45px;
+}
+
+.our-services-text {
+    color: #333333;
+    font-weight: 400;
+    line-height: 1.45em;
+}
